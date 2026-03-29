@@ -246,63 +246,76 @@ function animateCounter(element, target) {
 
 // ==================== AGE CALCULATOR ====================
 function initAgeCalculator() {
-    const calculateBtn = document.getElementById('calculate-age');
-    const catAgeInput = document.getElementById('cat-age');
+    var calculateBtn = document.getElementById('calculate-age');
+    var catAgeInput = document.getElementById('cat-age');
     
-    if (!calculateBtn || !catAgeInput) return;
-    
-    calculateBtn.addEventListener('click', calculateCatAge);
-    catAgeInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') calculateCatAge();
-    });
-    
-    // Initial calculation
-    calculateCatAge();
+    if (calculateBtn && catAgeInput) {
+        calculateBtn.onclick = function() {
+            calcularEdadGato();
+        };
+        
+        catAgeInput.onkeyup = function() {
+            calcularEdadGato();
+        };
+        
+        // Cálculo inicial
+        calcularEdadGato();
+    }
 }
 
-function calculateCatAge() {
-    const catAgeInput = document.getElementById('cat-age');
-    const humanYearsEl = document.getElementById('human-years');
-    const catYearsEl = document.getElementById('cat-years');
-    const descriptionEl = document.getElementById('age-description');
+function calcularEdadGato() {
+    var input = document.getElementById('cat-age');
+    var resultHuman = document.getElementById('human-years');
+    var resultCat = document.getElementById('cat-years');
+    var description = document.getElementById('age-description');
     
-    const catAge = parseFloat(catAgeInput.value) || 0;
-    let humanAge;
+    if (!input || !resultHuman || !resultCat || !description) return;
     
-    // Calculate human age equivalent
-    if (catAge === 0) {
-        humanAge = 0;
-    } else if (catAge === 1) {
-        humanAge = 15;
-    } else if (catAge === 2) {
-        humanAge = 24;
-    } else if (catAge <= 25) {
-        humanAge = 24 + (catAge - 2) * 4;
+    var edadGato = parseFloat(input.value);
+    if (isNaN(edadGato) || edadGato < 0) edadGato = 0;
+    
+    var edadHumana;
+    
+    // Fórmula veterinaria
+    if (edadGato === 0) {
+        edadHumana = 0;
+    } else if (edadGato < 1) {
+        edadHumana = Math.round(edadGato * 15);
+    } else if (edadGato === 1) {
+        edadHumana = 15;
+    } else if (edadGato === 2) {
+        edadHumana = 24;
+    } else if (edadGato <= 6) {
+        edadHumana = 24 + (edadGato - 2) * 4;
+    } else if (edadGato <= 10) {
+        edadHumana = 40 + (edadGato - 6) * 3;
+    } else if (edadGato <= 15) {
+        edadHumana = 52 + (edadGato - 10) * 2;
     } else {
-        humanAge = 24 + 23 * 4 + (catAge - 25) * 3;
+        edadHumana = 62 + (edadGato - 15) * 2.5;
     }
     
-    // Animate the numbers
-    animateNumber(humanYearsEl, humanAge);
-    catYearsEl.textContent = catAge;
+    // Mostrar resultados
+    resultHuman.textContent = Math.round(edadHumana);
+    resultCat.textContent = edadGato;
     
-    // Update description based on age
-    let description = '';
-    if (catAge < 0.5) {
-        description = 'Tu gatito es un bebé. Necesita alimentación especial para cachorros y mucha supervisión.';
-    } else if (catAge < 1) {
-        description = 'Tu gatito está en una etapa de crecimiento rápido. Es momento de socialización y vacunas.';
-    } else if (catAge < 3) {
-        description = 'Tu gato es joven y lleno de energía. Es el momento perfecto para establecer rutinas saludables.';
-    } else if (catAge < 7) {
-        description = 'Tu gato es un adulto en plena madurez. Mantén una dieta equilibrada y chequeos regulares.';
-    } else if (catAge < 11) {
-        description = 'Tu gato es senior. Considera chequeos veterinarios más frecuentes y adaptar su dieta.';
+    // Descripción
+    var texto = '';
+    if (edadGato < 0.5) {
+        texto = 'Tu gatito es un bebé. Necesita alimentación especial para cachorros.';
+    } else if (edadGato < 1) {
+        texto = 'Tu gatito está en crecimiento rápido. Momento de socialización y vacunas.';
+    } else if (edadGato < 3) {
+        texto = 'Tu gato es joven y lleno de energía. Es momento de establecer rutinas.';
+    } else if (edadGato < 7) {
+        texto = 'Tu gato es adulto. Mantén dieta equilibrada y chequeos regulares.';
+    } else if (edadGato <= 10) {
+        texto = 'Tu gato es senior. Considera chequeos veterinarios más frecuentes.';
     } else {
-        description = 'Tu gato es gerítrico. Necesita atención especial, dieta para senior y visitas veterinarias regulares.';
+        texto = 'Tu gato es gerítrico. Necesita atención especial y visitas regulares al vet.';
     }
     
-    descriptionEl.textContent = description;
+    description.textContent = texto;
 }
 
 function animateNumber(element, target) {
