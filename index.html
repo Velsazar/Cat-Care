@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados de Gatos | D&S Inc</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <i class="fas fa-cat"></i>
+                <span>D&S Inc</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#test">Test</a></li>
+                <li><a href="#mitos">Mitos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <h1 class="animate-text">Tu Guía Completa de Cuidados para Gatos</h1>
+            <p class="animate-text delay-1">Descubre todo lo que necesitas saber para mantener a tu felino saludable, feliz y lleno de vida.</p>
+            <div class="hero-buttons animate-text delay-2">
+                <a href="#about" class="btn btn-primary">Descubre Más</a>
+                <a href="#calculadora" class="btn btn-secondary">Calculadora de Edad</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#stats"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-cat"></i></div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Gatos Felices</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-comments"></i></div>
+                    <div class="stat-number" data-target="1200">0</div>
+                    <div class="stat-label">Consultas Respondidas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Artículos Publicados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">% Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre Nosotros</h2>
+                <p>Amantes de los gatos comprometidos con su bienestar y felicidad</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Tu Compañero Felino Merece lo Mejor</h3>
+                    <p>En <strong>D&S Inc</strong>, nos dedicamos a proporcionar la mejor información y recursos para el cuidado de tu gato. Nuestro equipo de veterinarios y expertos en comportamiento felino trabaja para ofrecerte consejos prácticos y basados en evidencia.</p>
+                    <p>Entendemos que cada gato es único, por eso ofrecemos guías personalizadas para diferentes edades, razas y necesidades especiales.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-user-md"></i>
+                            <div>
+                                <h4>Expertos Certificados</h4>
+                                <p>Equipo veterinario especializado</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Amor por los Gatos</h4>
+                                <p>Apasionados por su bienestar</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <h4>Información Actualizada</h4>
+                                <p>Basada en investigación</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h4>Comunidad Activa</h4>
+                                <p>Apoyo entre amantes de gatos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600" alt="Gato adorable">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Calculator Section -->
+    <section class="calculator-section" id="calculadora">
+        <div class="container">
+            <div class="section-header">
+                <h2>Calculadora de Edad Felina</h2>
+                <p>Descubre qué edad tiene tu gato en años humanos</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-card">
+                    <div class="calculator-input">
+                        <label for="cat-age">Ingresa la edad de tu gato (en años):</label>
+                        <div class="input-group">
+                            <input type="number" id="cat-age" min="0" max="25" placeholder="Ej: 5" value="5">
+                            <button class="calculate-btn" id="calculate-age">
+                                <i class="fas fa-calculator"></i> Calcular
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-result" id="calculator-result">
+                        <div class="result-display">
+                            <div class="human-age">
+                                <span class="age-number" id="human-years">36</span>
+                                <span class="age-label">años humanos</span>
+                            </div>
+                            <div class="age-equals">
+                                <i class="fas fa-equals"></i>
+                            </div>
+                            <div class="cat-age-display">
+                                <span class="age-number" id="cat-years">5</span>
+                                <span class="age-label">años de gato</span>
+                            </div>
+                        </div>
+                        <p class="age-description" id="age-description">Tu gato es un adulto en plena madurez. ¡Es el momento perfecto para establecer una rutina de salud preventiva!</p>
+                    </div>
+                    
+                    <div class="age-phases">
+                        <h4>Fases de Vida Felina:</h4>
+                        <div class="phases-grid">
+                            <div class="phase">
+                                <span class="phase-icon">🐱</span>
+                                <strong>Kitten</strong>
+                                <span>0-6 meses</span>
+                                <small>1-10 años humanos</small>
+                            </div>
+                            <div class="phase">
+                                <span class="phase-icon">🐈</span>
+                                <strong>Joven</strong>
+                                <span>6 meses - 2 años</span>
+                                <small>10-24 años humanos</small>
+                            </div>
+                            <div class="phase">
+                                <span class="phase-icon">🐱</span>
+                                <strong>Adulto</strong>
+                                <span>2-6 años</span>
+                                <small>24-40 años humanos</small>
+                            </div>
+                            <div class="phase">
+                                <span class="phase-icon">🐈</span>
+                                <strong>Senior</strong>
+                                <span>7-10 años</span>
+                                <small>44-56 años humanos</small>
+                            </div>
+                            <div class="phase">
+                                <span class="phase-icon">😺</span>
+                                <strong>Gerítrico</strong>
+                                <span>+11 años</span>
+                                <small>+60 años humanos</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section" id="test">
+        <div class="container">
+            <div class="section-header">
+                <h2>Test de Conocimientos Felinos</h2>
+                <p>Pon a prueba lo que sabes sobre los gatos</p>
+            </div>
+            
+            <div class="quiz-container">
+                <div class="quiz-card" id="quiz-card">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">Pregunta <span id="current-question">1</span> de <span id="total-questions">6</span></span>
+                    </div>
+                    
+                    <div class="quiz-question" id="quiz-question">
+                        <h3 id="question-text">¿Cuántas horas duerme un gato adulto en promedio?</h3>
+                    </div>
+                    
+                    <div class="quiz-options" id="quiz-options">
+                        <button class="option-btn" data-answer="a">4-6 horas</button>
+                        <button class="option-btn" data-answer="b">8-10 horas</button>
+                        <button class="option-btn" data-answer="c">12-16 horas</button>
+                        <button class="option-btn" data-answer="d">20-22 horas</button>
+                    </div>
+                    
+                    <div class="quiz-feedback" id="quiz-feedback"></div>
+                    
+                    <button class="next-btn" id="next-question" style="display: none;">
+                        Siguiente <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="quiz-result" id="quiz-result" style="display: none;">
+                    <div class="result-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>¡Test Completado!</h3>
+                    <div class="final-score">
+                        <span id="final-score">5</span>/<span id="total-score">6</span>
+                    </div>
+                    <p id="result-message">¡Excelente! Eres un verdadero experto en gatos.</p>
+                    <button class="restart-btn" id="restart-quiz">
+                        <i class="fas fa-redo"></i> Intentar de Nuevo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Myths Section -->
+    <section class="myths-section" id="mitos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mitos vs Realidades</h2>
+                <p>Descubre la verdad detrás de las creencias más comunes sobre gatos</p>
+            </div>
+            
+            <div class="myths-grid">
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <span class="myth-badge">MITO</span>
+                        <h3>Los gatos tienen nueve vidas</h3>
+                    </div>
+                    <button class="reveal-btn" data-myth="1">
+                        <span>Ver Realidad</span>
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="myth-reality" id="reality-1">
+                        <span class="reality-badge">REALIDAD</span>
+                        <p>Los gatos solo tienen una vida. Esta creencia surge de su habilidad para caer desde alturas y sobrevivir gracias a su reflejo de enderezamiento y su capacidad de aterrizar suavemente. Sin embargo, pueden sufrir graves lesiones en caídas.</p>
+                    </div>
+                </div>
+                
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <span class="myth-badge">MITO</span>
+                        <h3>Los gatos son animales antisociales</h3>
+                    </div>
+                    <button class="reveal-btn" data-myth="2">
+                        <span>Ver Realidad</span>
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="myth-reality" id="reality-2">
+                        <span class="reality-badge">REALIDAD</span>
+                        <p>Los gatos son sociables pero de manera diferente a los perros. Forman vínculos fuertes con sus dueños, buscan cariño y pueden deprimirse si están solos mucho tiempo. Simplemente valoran su espacio personal.</p>
+                    </div>
+                </div>
+                
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <span class="myth-badge">MITO</span>
+                        <h3>El leche es bueno para los gatos</h3>
+                    </div>
+                    <button class="reveal-btn" data-myth="3">
+                        <span>Ver Realidad</span>
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="myth-reality" id="reality-3">
+                        <span class="reality-badge">REALIDAD</span>
+                        <p>La mayoría de los gatos adultos son intolerantes a la lactosa. Darles leche puede causar diarrea, vómitos y malestar estomacal. Los gatos solo necesitan leche materna cuando son cachorros.</p>
+                    </div>
+                </div>
+                
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <span class="myth-badge">MITO</span>
+                        <h3>Los gatos siempre caen de pies</h3>
+                    </div>
+                    <button class="reveal-btn" data-myth="4">
+                        <span>Ver Realidad</span>
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="myth-reality" id="reality-4">
+                        <span class="reality-badge">REALIDAD</span>
+                        <p>Aunque los gatos tienen un excelente reflejo de enderezamiento, no siempre caen de pies. Necesitan al menos 30 cm de altura para enderezarse y pueden sufrir lesiones graves si caen de grandes alturas.</p>
+                    </div>
+                </div>
+                
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <span class="myth-badge">MITO</span>
+                        <h3>Morder el cable es señal de hambre</h3>
+                    </div>
+                    <button class="reveal-btn" data-myth="5">
+                        <span>Ver Realidad</span>
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="myth-reality" id="reality-5">
+                        <span class="reality-badge">REALIDAD</span>
+                        <p>Morder cables es un comportamiento relacionado con el juego, la exploración, el alivio del estrés o el intento de llamar la atención. Es peligroso y debe corregirse para evitar electrocución.</p>
+                    </div>
+                </div>
+                
+                <div class="myth-card">
+                    <div class="myth-header">
+                        <span class="myth-badge">MITO</span>
+                        <h3>Los gatos no necesitan vacunas</h3>
+                    </div>
+                    <button class="reveal-btn" data-myth="6">
+                        <span>Ver Realidad</span>
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="myth-reality" id="reality-6">
+                        <span class="reality-badge">REALIDAD</span>
+                        <p>Los gatos necesitan vacunas para prevenir enfermedades graves como la panleucopenia, calicivirus, rinotraqueitis y rabia. Incluso los gatos de interior deben vacunarse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Aid Section -->
+    <section class="firstaid-section" id="primerosauxilios">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-first-aid"></i> Primeros Auxilios Felinos</h2>
+                <p>Guía esencial para emergencias con tu gato</p>
+            </div>
+            
+            <div class="firstaid-grid">
+                <div class="firstaid-card">
+                    <div class="firstaid-icon">
+                        <i class="fas fa-skull-crossbones"></i>
+                    </div>
+                    <h3>Envenenamiento</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Señales de alerta</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Vómitos y diarrea</li>
+                                    <li>Salivación excesiva</li>
+                                    <li>Dificultad para respirar</li>
+                                    <li>Temblores o convulsiones</li>
+                                    <li>Pérdida de coordinación</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Qué hacer</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li>Retira al gato de la fuente de toxin</li>
+                                    <li><strong>NO</strong induzcas el vómito sin consejo veterinario</li>
+                                    <li>Contacta al veterinario inmediatamente</li>
+                                    <li>Lleva la etiqueta del producto si es posible</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="firstaid-card">
+                    <div class="firstaid-icon emergency">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Resucitación Cardiopulmonar</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Cuándo aplicar</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>No respira</li>
+                                    <li>No tiene pulso</li>
+                                    <li>Gums azules o pálidos</li>
+                                    <li>Inconsciente y no responde</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Pasos básicos</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li>Abrir vía aérea (extender cabeza)</li>
+                                    <li>Verificar respiración</li>
+                                    <li>Cerrar la boca y soplar en nariz (2 seg)</li>
+                                    <li>Compresiones torácicas (100-120/min)</li>
+                                    <li>Alternar 30 compresiones y 2 respiraciones</li>
+                                    <li>Transportar al veterinario inmediatamente</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="firstaid-card">
+                    <div class="firstaid-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Fracturas y Traumatismos</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Señales</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Cojera o no puede caminar</li>
+                                    <li>Dolor al tacto</li>
+                                    <li>Hinchazón en la zona</li>
+                                    <li>No quiere moverse</li>
+                                    <li>Gemidos de dolor</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Primeros auxilios</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li>Mantén al gato calmado y quieto</li>
+                                    <li><strong>NO</strong> intentes enderezar el hueso</li>
+                                    <li>Inmoviliza la zona si es posible</li>
+                                    <li>Usa una caja o transportín</li>
+                                    <li>Acude al veterinario inmediatamente</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="firstaid-card">
+                    <div class="firstaid-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3>Golpe de Calor</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Síntomas</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Jadeo excesivo</li>
+                                    <li>Encías rojas brillantes</li>
+                                    <li>Salivación abundante</li>
+                                    <li>Debilidad o colapso</li>
+                                    <li>Temperatura corporal >40°C</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Actuación inmediata</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li>Sacar al gato del calor inmediatamente</li>
+                                    <li>Aplicar agua tibia (no fría) en zonas estratégicas</li>
+                                    <li>Ofrecer agua fresca para beber</li>
+                                    <li>Colocar paños húmedos en axilas y patas</li>
+                                    <li>Acudir al veterinario urgentemente</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="firstaid-card">
+                    <div class="firstaid-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Problemas Oculares</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Señales de alarma</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Enrojecimiento</li>
+                                    <li>Legañas o secreción</li>
+                                    <li>Entrecerrar los ojos</li>
+                                    <li>Rascarse los ojos</li>
+                                    <li>Hinchazón de los párpados</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Cuidados básicos</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li>Limpiar con suero fisiológico</li>
+                                    <li>Usar algodón o gasa limpia</li>
+                                    <li>Limpiar de dentro hacia fuera</li>
+                                    <li>Un ojo por cada algodón</li>
+                                    <li>Consultar al veterinario si persiste</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="firstaid-card">
+                    <div class="firstaid-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Heridas y Cortes</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Tipo de heridas</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Cortes superficiales</li>
+                                    <li>Heridas profundas</li>
+                                    <li>Mordeduras</li>
+                                    <li>Arañazos infectados</li>
+                                    <li>Sangrado activo</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Tratamiento</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li>Limpia la herida con agua limpia</li>
+                                    <li>Aplica presión para detener sangrado</li>
+                                    <li>Usa antiséptico veterinario</li>
+                                    <li>Cubre si es necesario</li>
+                                    <li>Acude al vet si es profunda o sangra mucho</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="emergency-box">
+                <div class="emergency-content">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Número de Emergencia Veterinaria</h4>
+                        <p>Guarda este número: <strong>+34 900 123 456</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo Que Dicen Nuestros Usuarios</h2>
+                <p>Historias reales de dueños de gatos felices</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"La calculadora de edad me ayudó a entender mejor las necesidades de mi gato senior. Ahora sé que necesita chequeos más frecuentes. ¡Información muy útil!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="María García">
+                            <div>
+                                <h4>María García</h4>
+                                <span>Dueña de 2 gatos</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"El test de conocimientos fue muy entretenido y aprendí cosas nuevas sobre mis gatos. La sección de primeros auxilios es imprescindible para todo dueño."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Carlos Ruiz">
+                            <div>
+                                <h4>Carlos Ruiz</h4>
+                                <span>Dueño de Mishi</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Gracias a la guía de alimentación, descubrí que mi gato era intolerante a la lactosa. Ahora está mucho más sano y activo. ¡Mil gracias D&S Inc!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Laura Martínez">
+                            <div>
+                                <h4>Laura Martínez</h4>
+                                <span>Dueña de Luna</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"La sección de mitos me ayudó a corregir muchos errores que tenía sobre el cuidado de mi gato. El modo oscuro es perfecto para leer de noche."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" alt="Pedro Sánchez">
+                            <div>
+                                <h4>Pedro Sánchez</h4>
+                                <span>Dueño de 3 gatos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev" id="prev-testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots" id="slider-dots"></div>
+                    <button class="slider-btn next" id="next-testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galería de Gatos</h2>
+                <p>Una colección de nuestros amigos felinos favoritos</p>
+            </div>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="care">Cuidados</button>
+                <button class="filter-btn" data-filter="breeds">Razas</button>
+                <button class="filter-btn" data-filter="fun">Divertidos</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" data-category="care">
+                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400" alt="Gato durmiendo">
+                    <div class="gallery-overlay">
+                        <h4>Siesta Perfecta</h4>
+                        <p>Los gatos duermen 12-16 horas al día</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="breeds">
+                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400" alt="Gato naranja">
+                    <div class="gallery-overlay">
+                        <h4>Gato Naranja</h4>
+                        <p>Conocidos por su personalidad amigable</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="fun">
+                    <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400" alt="Gato jugando">
+                    <div class="gallery-overlay">
+                        <h4>Hora de Jugar</h4>
+                        <p>El juego es esencial para su desarrollo</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="care">
+                    <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400" alt="Gato comiendo">
+                    <div class="gallery-overlay">
+                        <h4>Alimentación Balanceada</h4>
+                        <p>Una dieta saludable es clave</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="breeds">
+                    <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=400" alt="Gato siames">
+                    <div class="gallery-overlay">
+                        <h4>Gato Siamés</h4>
+                        <p>Una de las razas más populares</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="fun">
+                    <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=400" alt="Gato curioso">
+                    <div class="gallery-overlay">
+                        <h4>Curiosidad Felina</h4>
+                        <p>Su naturaleza investigadora</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="care">
+                    <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=400" alt="Gato cepillado">
+                    <div class="gallery-overlay">
+                        <h4>Cepillado Regular</h4>
+                        <p>Mantiene el pelaje saludable</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="breeds">
+                    <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?w=400" alt="Gato persa">
+                    <div class="gallery-overlay">
+                        <h4>Gato Persa</h4>
+                        <p>Elegante y de pelo largo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes preguntas? Estamos aquí para ayudarte</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Hablemos de tu Gato</h3>
+                    <p>Nuestro equipo de expertos está disponible para resolver tus dudas sobre el cuidado de tu felino. Ya sea sobre alimentación, salud, comportamiento o cualquier otra consulta, no dudes en contactarnos.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Calle de los Gatos 123, Ciudad Felina</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+34 900 123 456</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@dandsinc.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Lunes - Viernes: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre *</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject">
+                                <option value="">Selecciona un tema</option>
+                                <option value="alimentacion">Alimentación</option>
+                                <option value="salud">Salud</option>
+                                <option value="comportamiento">Comportamiento</option>
+                                <option value="productos">Productos</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" placeholder="Cuéntanos tu consulta..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>D&S Inc</h3>
+                    <p>Tu fuente confiable de información sobre cuidados felinos. Nos dedicamos a mejorar la vida de los gatos y sus dueños a través de educación y apoyo.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#about">Sobre Nosotros</a></li>
+                        <li><a href="#calculadora">Calculadora</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contenido</h3>
+                    <ul>
+                        <li><a href="#test">Test de Conocimientos</a></li>
+                        <li><a href="#mitos">Mitos vs Realidades</a></li>
+                        <li><a href="#primerosauxilios">Primeros Auxilios</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir consejos exclusivos y novedades sobre el cuidado de gatos.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 D&S Inc. Todos los derechos reservados. Hecho con <i class="fas fa-heart"></i> para los amantes de gatos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
